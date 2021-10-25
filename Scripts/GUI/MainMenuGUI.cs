@@ -32,6 +32,7 @@ public class MainMenuGUI : MonoBehaviour
         levelData.LoadSprite();
         Debug.Log("Loading");
         _background = levelData.levelSprite;
+
         R_background.sprite = _background;
     }
 

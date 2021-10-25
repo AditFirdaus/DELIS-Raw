@@ -40,11 +40,14 @@ public class LoadingScreen : MonoBehaviour
 
     public static void Load(Action targetAction)
     {
+        Debug.Log("Here");
         GameObject window = Instantiate(ScreenPrefab);
         DontDestroyOnLoad(window);
 
+        Debug.Log("Here");
         LoadingScreen loadingScreen = window.GetComponent<LoadingScreen>();
 
+        Debug.Log("Here");
         loadingScreen.screen = window;
         loadingScreen.Loading(targetAction);
     }
@@ -52,23 +55,25 @@ public class LoadingScreen : MonoBehaviour
     public void Loading(Action action)
     {
         StartCoroutine(LoadingProcess(action, processDuration, introDuration, outroDuration));
+
     }
 
     public IEnumerator LoadingProcess(Action action, float processDuration = 0, float introDuration = 0, float outroDuration = 0)
     {
+        Debug.Log(Time.timeScale);
         float slicedProcess = processDuration / 2;
 
         Intro();
         yield return new WaitForSeconds(introDuration);
-
+        Debug.Log("Here");
         ProcessStart();
         yield return new WaitForSeconds(slicedProcess);
-
+        Debug.Log("Here");
         yield return StartCoroutine(Process(action));
-
+        Debug.Log("Here");
         ProcessEnd();
         yield return new WaitForSeconds(slicedProcess);
-
+        Debug.Log("Here");
         Outro();
         yield return new WaitForSeconds(outroDuration);
         Destroy(gameObject);
@@ -136,6 +141,7 @@ public class LoadingScreen : MonoBehaviour
 
         bool complete = false;
         Debug.Log(complete);
+
         while (!complete)
         {
             yield return new WaitForEndOfFrame();

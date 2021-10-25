@@ -2,7 +2,7 @@ using System.Diagnostics;
 
 public class Score
 {
-    public static int totalNotes = 664;
+    public static int totalNotes = 1;
     public static float P()
     {
         return 900000f / totalNotes;

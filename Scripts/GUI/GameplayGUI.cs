@@ -28,6 +28,7 @@ public class GameplayGUI : MonoBehaviour
     private void Start()
     {
         Debug.Log("Updated");
+        Debug.Log(Gameplay.levelData);
         UpdateData();
         GameplayData.OnUpdateCombo.AddListener(UpdateCombo);
         GameplayData.OnUpdateScore.AddListener(UpdateScore);
@@ -61,10 +62,17 @@ public class GameplayGUI : MonoBehaviour
 
     public void UpdateData()
     {
-        RBackground.transform.localScale = Vector3.one * 2.5f;
-        RBackground.gameObject.LeanScale(Vector3.one, 4).setEaseOutExpo().setIgnoreTimeScale(true);
+        Gameplay.levelData.LoadData(true);
+        RBackground.transform.localScale = Vector3.one * 1.25f;
+        SetBackgroundSize(Vector2.one, 4, LeanTweenType.easeInOutExpo);
         RBackground.sprite = Gameplay.levelData.levelSprite;
         RName.text = Gameplay.levelData.levelName.ToString();
         RMusic.text = Gameplay.levelData.musicName.ToString();
+    }
+
+    public void SetBackgroundSize(Vector2 size, float time = 4, LeanTweenType leanTweenType = LeanTweenType.linear)
+    {
+        RBackground.gameObject.LeanCancel();
+        RBackground.gameObject.LeanScale(size, time).setEase(leanTweenType).setIgnoreTimeScale(true);
     }
 }

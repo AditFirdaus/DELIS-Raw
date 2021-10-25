@@ -10,6 +10,8 @@ public class LevelSelector : MonoBehaviour
     public static LevelPack levelPack;
     public static LevelData levelData;
     public LevelPack _levelPack;
+    public CanvasGroup levelSelector;
+    public AudioSource audioSource;
 
     public static void Enter(LevelPack levelPack)
     {
@@ -41,17 +43,37 @@ public class LevelSelector : MonoBehaviour
 
     public void Play()
     {
+        LeanTween.value(audioSource.gameObject,
+            (float i) =>
+            {
+                audioSource.volume = i;
+            },
+            audioSource.volume,
+            0,
+            1
+        ).setEaseOutExpo();
+        levelSelector.gameObject.LeanScale(Vector3.one * 1.5f, 1);
+        levelSelector.LeanAlpha(0, 1).setEaseOutExpo()
+        .setOnComplete(
+            () =>
+            {
+                if (Game.player.creator)
+                {
+                    NoteMapCreator.Create(levelData);
+                }
+                else
+                {
+                    Gameplay.Play(levelData);
+                }
+            }
+        );
+
+        /*
         LoadingScreen.Load(() =>
         {
-            if (Game.player.creator)
-            {
-                NoteMapCreator.Create(levelData);
-            }
-            else
-            {
-                Gameplay.Play(levelData);
-            }
+            
         });
+        */
     }
 
     public void Back()

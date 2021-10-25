@@ -14,8 +14,14 @@ public class SplashGUI : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        LeanAudio.play(introMusic);
-        SMKScreen();
+        LeanTween.delayedCall(3,
+        () =>
+        {
+            LeanAudio.play(introMusic);
+            SMKScreen();
+        }
+        );
+
 
     }
 

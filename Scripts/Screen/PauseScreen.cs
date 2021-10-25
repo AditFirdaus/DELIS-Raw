@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseScreen : MonoBehaviour
 {
     public CountdownScreen SCountdown;
+    public RectTransform screen;
+    public CanvasGroup backgroundCanvasGroup;
 
     private void OnApplicationPause(bool pauseStatus)
     {
@@ -14,7 +16,15 @@ public class PauseScreen : MonoBehaviour
     }
     public void Pause()
     {
+        backgroundCanvasGroup.gameObject.LeanCancel();
+        backgroundCanvasGroup.LeanAlpha(1, 0.5f).setIgnoreTimeScale(true);
+
+        screen.LeanCancel();
+        screen.LeanMoveX(0, 1).setEaseOutExpo().setIgnoreTimeScale(true);
+
         gameObject.SetActive(true);
+        GameplayGUI.main.SetBackgroundSize(Vector2.one * 1.25f, 4, LeanTweenType.easeOutExpo);
+        Gameplay.main.DisplayGameplayGUI(Vector2.one * 1.25f, 0, LeanTweenType.easeInBack);
         Gameplay.main.Freeze();
     }
     public void UnPause()
@@ -24,7 +34,23 @@ public class PauseScreen : MonoBehaviour
 
     public void Resume()
     {
-        gameObject.SetActive(false);
+        backgroundCanvasGroup.gameObject.LeanCancel();
+        backgroundCanvasGroup.LeanAlpha(0, 0.5f).setIgnoreTimeScale(true);
+
+        screen.LeanCancel();
+        screen.LeanMoveX(0, 1).setEaseOutExpo().setIgnoreTimeScale(true);
+
+
+        screen.LeanCancel();
+        screen.LeanMoveX(-800, 1).setEaseOutExpo().setIgnoreTimeScale(true).setOnComplete(
+            () =>
+            {
+                gameObject.SetActive(false);
+            }
+        );
+
+        GameplayGUI.main.SetBackgroundSize(Vector2.one, 4, LeanTweenType.easeOutExpo);
+        Gameplay.main.DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
         SCountdown.Countdown(3, UnPause);
     }
 

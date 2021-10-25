@@ -6,8 +6,19 @@ using UnityEngine.SceneManagement;
 public class ResultScreen : MonoBehaviour
 {
     public UserStats userStats;
+    public RectTransform screen;
+    public CanvasGroup background;
+    public AudioSource audioSource;
     public void Result()
     {
+
+        background.gameObject.LeanCancel();
+        background.LeanAlpha(1, 2).setIgnoreTimeScale(true);
+
+        screen.LeanCancel();
+        screen.LeanScale(Vector3.one * 4, 0).setIgnoreTimeScale(true);
+        screen.LeanScale(Vector3.one, 1).setEaseOutExpo().setIgnoreTimeScale(true);
+
         ApplyResult();
         gameObject.SetActive(true);
 
@@ -35,11 +46,24 @@ public class ResultScreen : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        audioSource.Stop();
+
+        screen.LeanCancel();
+        screen.LeanScale(Vector3.one * 4, 1).setEaseInExpo().setIgnoreTimeScale(true); ;
+
+
+        background.gameObject.LeanCancel();
+        background.LeanAlpha(0, 1).setIgnoreTimeScale(true).setOnComplete(
+            () =>
+            {
+                Gameplay.Play(Gameplay.levelData);
+            }
+        );
     }
 
     public void Back()
     {
-        LoadingScreen.Load(() => SceneManager.LoadScene("LevelSelector"));
+        audioSource.Stop();
+        Gameplay.main.Back();
     }
 }

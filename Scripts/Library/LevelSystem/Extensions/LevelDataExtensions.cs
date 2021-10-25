@@ -8,6 +8,7 @@ public static class LevelDataExtensions
 {
     public static void LoadData(this LevelData levelData, bool music = false)
     {
+        Debug.Log(levelData);
         levelData.LoadResult();
         levelData.LoadNoteMap();
         levelData.LoadSprite();

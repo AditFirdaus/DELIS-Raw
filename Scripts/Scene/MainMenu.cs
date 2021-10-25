@@ -47,4 +47,9 @@ public class MainMenu : MonoBehaviour
         LoadingScreen.Load(() => LevelSelector.Enter(levelPack));
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 }

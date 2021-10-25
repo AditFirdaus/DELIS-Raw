@@ -17,6 +17,7 @@ public class NotePlayer : MonoBehaviour
 
     public void Start()
     {
+        if (Game.player.autohit) autohit = Game.player.autohit;
         if (autoplay) Activate();
     }
 
@@ -33,6 +34,7 @@ public class NotePlayer : MonoBehaviour
         Note note = noteAnalyzer.notes[noteAnalyzer.index];
         GameObject gameObject = GameObject.Instantiate(note.pack.register.instance, (Vector3)note.data.world + Vector3.forward * spawnDistance, Quaternion.identity, noteArea);
         gameObject.LeanMoveLocalZ(0, 1);
+
         if (autohit) LeanTween.delayedCall(-note.pack.register.offset, () => GameplayInput.RayInput(Camera.main.ViewportToScreenPoint(note.data.viewport)));
     }
 }

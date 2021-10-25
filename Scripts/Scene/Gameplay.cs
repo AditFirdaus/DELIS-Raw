@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
@@ -15,6 +16,8 @@ public class Gameplay : MonoBehaviour
     public AudioSource audioSource;
     public NotePlayer notePlayer;
 
+    public CanvasGroup gameplayGUI;
+
     public NoteRegister[] noteRegisters;
 
     public LTDescr levelCompleteLT;
@@ -23,6 +26,10 @@ public class Gameplay : MonoBehaviour
     private void Awake()
     {
         main = this;
+        gameplayGUI.transform.localScale = Vector3.one * 1.5f;
+        gameplayGUI.alpha = 0;
+
+        if (levelData == null) levelData = _levelData;
     }
 
     public static void Play(LevelData level, float delay = -1)
@@ -36,7 +43,15 @@ public class Gameplay : MonoBehaviour
     private void Start()
     {
 
-        if (levelData == null) levelData = _levelData;
+        GameplayData.Reset();
+
+
+
+
+
+        Debug.Log(levelData);
+        Debug.Log(_levelData);
+        DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
         LeanTween.delayedCall(
             delay,
             StartGame
@@ -56,7 +71,7 @@ public class Gameplay : MonoBehaviour
 
         if (Game.player.autohit) notePlayer.autohit = true;
 
-        GameplayData.Reset();
+
         GameplayGUI.main.SCountdown.Countdown(4, LevelBegin);
     }
 
@@ -68,10 +83,22 @@ public class Gameplay : MonoBehaviour
     }
     public void LevelEnd()
     {
-        levelCompleteLT = LeanTween.delayedCall(3, () =>
-        {
-            LoadingScreen.Load(() => GameplayGUI.main.SResult.Result());
-        });
+        gameplayGUI.interactable = false;
+        gameplayGUI.gameObject.LeanCancel();
+        gameplayGUI.LeanAlpha(0, 3).setIgnoreTimeScale(true);
+        gameplayGUI.GetComponent<RectTransform>().LeanScale(Vector2.one * 1.25f, 3).setIgnoreTimeScale(true).setEaseInBack().setOnComplete(
+            () =>
+            {
+                GameplayGUI.main.SetBackgroundSize(Vector2.one * 1.25f, 3, LeanTweenType.easeInOutCubic);
+
+                levelCompleteLT = LeanTween.delayedCall(3, () =>
+                {
+                    audioSource.Stop();
+                    GameplayGUI.main.SResult.Result();
+                }).setIgnoreTimeScale(true);
+            }
+        );
+
     }
     public void Freeze()
     {
@@ -87,15 +114,32 @@ public class Gameplay : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
-        LoadingScreen.Load(() => Play(levelData));
+        Play(levelData);
+        //LoadingScreen.Load(() => );
     }
     public void Back()
     {
         if (levelCompleteLT != null) LeanTween.cancel(levelCompleteLT.id);
-        Time.timeScale = 1;
+
 
         LevelPack levelPack = LevelSelector.levelPack;
 
-        if (levelPack) LoadingScreen.Load(() => { LevelSelector.Enter(levelPack); });
+        Time.timeScale = 1;
+        if (levelPack) LoadingScreen.Load(() =>
+        {
+
+            levelPack.LoadMusics();
+
+            LevelSelector.Enter(levelPack);
+
+        });
     }
+
+    public void DisplayGameplayGUI(Vector2 size, float alpha, LeanTweenType leanTweenType = LeanTweenType.linear)
+    {
+        gameplayGUI.gameObject.LeanCancel();
+        gameplayGUI.gameObject.LeanScale(size, 1).setEase(leanTweenType).setIgnoreTimeScale(true);
+        gameplayGUI.LeanAlpha(alpha, 1f).setIgnoreTimeScale(true);
+    }
+
 }

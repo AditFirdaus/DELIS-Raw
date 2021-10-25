@@ -39,7 +39,7 @@ public class LevelDataDisplayer : MonoBehaviour
         {
             panel.gameObject.LeanCancel();
             panel.canvasGroup.alpha = 0;
-            panel.transform.localScale = Vector3.one * 0.25f;
+            panel.transform.localScale = Vector3.one * 0.5f;
         }
     }
 
@@ -54,7 +54,7 @@ public class LevelDataDisplayer : MonoBehaviour
                 {
                     LeanAudio.play(panelAudio);
                     panel.canvasGroup.LeanAlpha(1, 0.5f).setEaseOutExpo();
-                    panel.gameObject.LeanScale(Vector3.one, 0.5f).setEaseOutExpo();
+                    panel.gameObject.LeanScale(Vector3.one, 2f).setEaseOutElastic();
                 }
             );
 

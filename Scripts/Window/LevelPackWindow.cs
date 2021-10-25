@@ -133,5 +133,6 @@ public class LevelPackWindow : MonoBehaviour
         );
 
         expand = false;
+
     }
 }

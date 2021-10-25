@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelDataSelector : MonoBehaviour
 {
     public static LevelDataSelector main;
     public GameObject levelDataWindowPrefab;
     public LevelDataWindow[] levelDataWindows;
-    public GameObject levelDataSelectionGrid;
+    public RectTransform levelDataSelectionGrid;
+    public LevelDataWindow selectedWindow;
 
     private void Awake()
     {
@@ -18,7 +20,6 @@ public class LevelDataSelector : MonoBehaviour
     [ContextMenu("Create Windowss")]
     public void CreateLevelDataWindows()
     {
-
         foreach (LevelDataWindow window in levelDataWindows)
         {
             Destroy(window.gameObject);
@@ -33,9 +34,17 @@ public class LevelDataSelector : MonoBehaviour
             LevelDataWindow levelDataWindow = window.GetComponent<LevelDataWindow>();
             levelDataWindow.levelData = levelDatas[i];
 
+            levelDataWindow.levelDataSelector = this;
+
             levelDataWindow.Initialize();
 
             levelDataWindows[i] = levelDataWindow;
         }
+    }
+
+    public void Select(LevelDataWindow window)
+    {
+        LevelSelector.main.Select(window.levelData);
+        selectedWindow = window;
     }
 }
