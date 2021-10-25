@@ -966,3 +966,6 @@ MonoBehaviour:
   levelPack: {fileID: 11400000, guid: 3d34180341945bb49be810d84dd748ee, type: 2}
   levelData: {fileID: 11400000, guid: e0abf9314f565904b95549d2f88c8555, type: 2}
   loadingScreenPrefab: {fileID: 8754262688363849668, guid: 703d78eb991d04448b3e0af212a4b84c, type: 3}
+  buttonClick1: {fileID: 8300000, guid: 9e058c80b6bcde34b9006ddf3f4891aa, type: 3}
+  buttonClick2: {fileID: 0}
+  buttonClick3: {fileID: 0}

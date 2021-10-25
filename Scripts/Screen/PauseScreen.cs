@@ -10,12 +10,19 @@ public class PauseScreen : MonoBehaviour
     public RectTransform screen;
     public CanvasGroup backgroundCanvasGroup;
 
+    public AudioClip pauseIn;
+    public AudioClip pauseOut;
+
     private void OnApplicationPause(bool pauseStatus)
     {
         Pause();
     }
     public void Pause()
     {
+        LeanAudio.play(pauseIn);
+        if (Splash.main.buttonClick1) LeanAudio.play(Splash.main.buttonClick1);
+
+
         backgroundCanvasGroup.gameObject.LeanCancel();
         backgroundCanvasGroup.LeanAlpha(1, 0.5f).setIgnoreTimeScale(true);
 
@@ -34,6 +41,9 @@ public class PauseScreen : MonoBehaviour
 
     public void Resume()
     {
+        LeanAudio.play(pauseOut);
+        if (Splash.main.buttonClick1) LeanAudio.play(Splash.main.buttonClick1);
+
         backgroundCanvasGroup.gameObject.LeanCancel();
         backgroundCanvasGroup.LeanAlpha(0, 0.5f).setIgnoreTimeScale(true);
 
@@ -42,7 +52,7 @@ public class PauseScreen : MonoBehaviour
 
 
         screen.LeanCancel();
-        screen.LeanMoveX(-800, 1).setEaseOutExpo().setIgnoreTimeScale(true).setOnComplete(
+        screen.LeanMoveX(760, 1).setEaseOutExpo().setIgnoreTimeScale(true).setOnComplete(
             () =>
             {
                 gameObject.SetActive(false);

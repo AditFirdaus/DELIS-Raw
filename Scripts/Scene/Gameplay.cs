@@ -45,7 +45,7 @@ public class Gameplay : MonoBehaviour
 
         GameplayData.Reset();
 
-
+        if (levelData == null) levelData = _levelData;
 
 
 
@@ -113,12 +113,14 @@ public class Gameplay : MonoBehaviour
 
     public void Restart()
     {
+        if (Splash.main.buttonClick1) LeanAudio.play(Splash.main.buttonClick1);
         Time.timeScale = 1;
         Play(levelData);
         //LoadingScreen.Load(() => );
     }
     public void Back()
     {
+        if (Splash.main.buttonClick1) LeanAudio.play(Splash.main.buttonClick1);
         if (levelCompleteLT != null) LeanTween.cancel(levelCompleteLT.id);
 
 

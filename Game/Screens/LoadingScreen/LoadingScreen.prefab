@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 3373345666738004214}
   - component: {fileID: 1537384288272162827}
   - component: {fileID: 5440529383757786928}
+  - component: {fileID: 5145589223023674367}
   m_Layer: 5
   m_Name: Loading
   m_TagString: Untagged
@@ -381,6 +382,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &5145589223023674367
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210494279787144103}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8343320432042928100
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c833d418eb523447a3c988fc3fc2852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introDuration: 0.25
-  processDuration: 3
-  outroDuration: 0.25
+  introDuration: 0.5
+  outroDuration: 0.5
   gameTips:
   - Cara Bermain Yang Benar ialah Dengan Mengetuk note dengan tepat
   - Game ini dari SMK Prestasi Prima
@@ -765,5 +777,6 @@ MonoBehaviour:
   screenCanvas: {fileID: 5647497598452725929}
   tipsCanvas: {fileID: 8000249074259458538}
   indicatorCanvas: {fileID: 6423558403115327397}
+  loadingReferences: {fileID: 5145589223023674367}
   backgroundPanel: {fileID: 4048107097413965560}
   tipsText: {fileID: 5103365331756079357}
