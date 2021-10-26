@@ -14,7 +14,6 @@ public static class LevelResultExtensions
 
     public static void LoadResult(this LevelData levelData)
     {
-        Debug.Log(levelData);
         bool loaded = SLS.LoadJson<LevelResult>(
             levelData.levelResult,
             Application.persistentDataPath,

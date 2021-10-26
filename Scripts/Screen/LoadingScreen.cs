@@ -41,14 +41,14 @@ public class LoadingScreen : MonoBehaviour
 
     public static void Load(Action targetAction)
     {
-        Debug.Log("Here");
+
         GameObject window = Instantiate(ScreenPrefab);
         DontDestroyOnLoad(window);
 
-        Debug.Log("Here");
+
         LoadingScreen loadingScreen = window.GetComponent<LoadingScreen>();
 
-        Debug.Log("Here");
+
         loadingScreen.screen = window;
         loadingScreen.Loading(targetAction);
     }
@@ -65,15 +65,15 @@ public class LoadingScreen : MonoBehaviour
 
         Intro();
         yield return new WaitForSecondsRealtime(introDuration);
-        Debug.Log("Here");
+
         ProcessStart();
         yield return new WaitForSecondsRealtime(slicedProcess);
-        Debug.Log("Here");
+
         yield return StartCoroutine(Process(action));
-        Debug.Log("Here");
+
         ProcessEnd();
         yield return new WaitForSecondsRealtime(slicedProcess);
-        Debug.Log("Here");
+
         Outro();
         yield return new WaitForSecondsRealtime(outroDuration);
         Destroy(gameObject);
@@ -145,7 +145,6 @@ public class LoadingScreen : MonoBehaviour
         Time.timeScale = 0;
 
         bool complete = false;
-        Debug.Log(complete);
 
         while (!complete)
         {

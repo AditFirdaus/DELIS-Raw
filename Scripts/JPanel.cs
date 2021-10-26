@@ -16,7 +16,6 @@ public class JPanel : MonoBehaviour
     public void UpdatePanel()
     {
         RJPoint.text = Game.player.jPoint.ToString();
-        Debug.Log(RJPoint.text);
     }
 
 }

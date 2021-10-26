@@ -78,11 +78,12 @@ public static class LevelPackExtensions
     {
         string folderPath = $"Game/Level/LevelData/{levelPack.packName}";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            folderPath
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(folderPath)}");
+            folderPath,
+            true
+            );
 
         LevelData[] levelDatas = Resources.LoadAll<LevelData>(folderPath); Debug.Log($"Asset Loaded : {levelDatas}");
 
@@ -93,11 +94,12 @@ public static class LevelPackExtensions
     {
         string folderPath = $"Game/LevelPack";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            folderPath
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(folderPath)}");
+            folderPath,
+            true
+            );
 
         LevelPack[] levelPacks = Resources.LoadAll<LevelPack>(folderPath); Debug.Log($"Asset Loaded : {levelPacks}");
 

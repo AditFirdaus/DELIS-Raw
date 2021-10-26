@@ -30,7 +30,6 @@ public class MainMenuGUI : MonoBehaviour
         LevelData levelData = levelPack.levelDatas[Random.Range(0, levelPack.levelDatas.Length)];
 
         levelData.LoadSprite();
-        Debug.Log("Loading");
         _background = levelData.levelSprite;
 
         R_background.sprite = _background;

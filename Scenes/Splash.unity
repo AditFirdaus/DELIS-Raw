@@ -930,6 +930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2051128271}
   - component: {fileID: 2051128272}
+  - component: {fileID: 2051128273}
   m_Layer: 0
   m_Name: Splash
   m_TagString: Untagged
@@ -969,3 +970,25 @@ MonoBehaviour:
   buttonClick1: {fileID: 8300000, guid: 9e058c80b6bcde34b9006ddf3f4891aa, type: 3}
   buttonClick2: {fileID: 0}
   buttonClick3: {fileID: 0}
+--- !u!114 &2051128273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051128270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73acc77a11863ed46abe3bd44f48ef7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _GResources:
+    soundEffects:
+      UI_Button_Click_1: {fileID: 0}
+      UI_Button_Click_2: {fileID: 0}
+    objects:
+      Screen_Loading: {fileID: 0}
+    data:
+      gameplay:
+        Tutorial_LevelPack: {fileID: 0}
+        Tutorial_LevelData: {fileID: 0}

@@ -27,8 +27,6 @@ public class GameplayGUI : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Updated");
-        Debug.Log(Gameplay.levelData);
         UpdateData();
         GameplayData.OnUpdateCombo.AddListener(UpdateCombo);
         GameplayData.OnUpdateScore.AddListener(UpdateScore);

@@ -39,7 +39,6 @@ public class ResultScreen : MonoBehaviour
     public void ApplyReward(float score)
     {
         int reward = (int)((score / 1000000) * 5000);
-        Debug.Log(reward);
         Game.player.jPoint += reward;
         Game.player.Save();
     }

@@ -9,14 +9,14 @@ public class Player
 {
     public string name;
     public Sprite avatar;
-    public int jPoint = 1000;
+    public int jPoint = 10000;
     public bool autohit = false;
     public bool tutorial = true;
     public bool creator = false;
 
     public void Save()
     {
-        Debug.Log(this.SaveJson<Player>(Application.persistentDataPath, "/User", "Player"));
+        this.SaveJson<Player>(Application.persistentDataPath, "/User", "Player");
     }
 
     public static void Load(Player player)

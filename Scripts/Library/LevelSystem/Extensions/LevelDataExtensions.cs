@@ -8,7 +8,6 @@ public static class LevelDataExtensions
 {
     public static void LoadData(this LevelData levelData, bool music = false)
     {
-        Debug.Log(levelData);
         levelData.LoadResult();
         levelData.LoadNoteMap();
         levelData.LoadSprite();
@@ -19,11 +18,12 @@ public static class LevelDataExtensions
     {
         string filePath = $"Game/Level/Music/{levelData.packName}/{levelData.levelName}/{levelData.musicName}";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            Path.GetDirectoryName(filePath)
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(filePath + ".mp3")}");
+            Path.GetDirectoryName(filePath),
+            true
+            );
 
         levelData.ProcessLevelDataMusic();
 
@@ -41,11 +41,12 @@ public static class LevelDataExtensions
     {
         string filePath = $"Game/Level/Sprite/{levelData.packName}/{levelData.levelName}";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            Path.GetDirectoryName(filePath)
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(filePath + ".png")}");
+            Path.GetDirectoryName(filePath),
+            true
+            );
 
 
         Sprite sprite = Resources.Load<Sprite>(filePath); Debug.Log($"Asset Loaded : {sprite}");
@@ -58,11 +59,12 @@ public static class LevelDataExtensions
         Debug.Log("NoteMap");
         string filePath = $"Game/Level/NoteMap/{levelData.packName}/{levelData.levelName}";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            Path.GetDirectoryName(filePath)
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(filePath + ".json")}");
+            Path.GetDirectoryName(filePath),
+            true
+            );
 
         TextAsset textAsset = Resources.Load<TextAsset>(filePath); Debug.Log($"Asset Loaded : {textAsset}");
 
@@ -78,12 +80,12 @@ public static class LevelDataExtensions
     {
         string filePath = $"Game/Level/Music/{levelData.packName}/{levelData.levelName}/{levelData.musicName}";
 
-        Directory.CreateDirectory(
+        SLS.CreateDirectory(
             Application.dataPath +
             "/Resources/" +
-            Path.GetDirectoryName(filePath)
-            ); Debug.Log($"Directory Created on {Path.GetDirectoryName(filePath + ".mp3")}");
-
+            Path.GetDirectoryName(filePath),
+            true
+            );
         AudioClip[] audioClips = Resources.LoadAll<AudioClip>($"Game/Level/Music/{levelData.packName}/{levelData.levelName}");
 
 

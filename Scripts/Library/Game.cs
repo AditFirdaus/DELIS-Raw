@@ -10,7 +10,6 @@ public class Game
 
 public static class SLS
 {
-
     public static T LoadResource<T>(string loadPath, string fileName) where T : UnityEngine.Object
     {
         string filePath = $"{loadPath}/{fileName}";
@@ -33,7 +32,7 @@ public static class SLS
 
             string data = JsonUtility.ToJson(obj, true);
 
-            Directory.CreateDirectory(folder);
+            SLS.CreateDirectory(folder);
             File.WriteAllText(file, data);
 
             Debug.Log($"Save Berhasil Ke {file} dengan data {data}");
@@ -57,7 +56,7 @@ public static class SLS
             string folder = basePath + loadPath;
             string file = folder + $"/{filename}.json";
 
-            Directory.CreateDirectory(folder);
+            SLS.CreateDirectory(folder);
 
             if (!File.Exists(file)) { Debug.Log($"Load File Gagal Dikarenakan File Yang Dituju Tidak Ada Di Direktori : {file}"); return false; } // Akan mereturn false jika file yang dituju tidak ada
 
@@ -73,4 +72,29 @@ public static class SLS
             return false;
         }
     }
+
+    public static bool CreateDirectory(string path, bool editorOnly = false)
+    {
+        if (editorOnly && !Application.isEditor) return true;
+
+        bool state = false;
+        try
+        {
+            string directoryPath = path;
+
+            Directory.CreateDirectory(Path.GetDirectoryName(directoryPath));
+
+            Debug.Log($"Directory Created on {directoryPath}");
+
+            state = true;
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Create Directory Failed");
+            state = false;
+        }
+
+        return state;
+    }
+
 }

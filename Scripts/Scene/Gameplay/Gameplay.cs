@@ -47,10 +47,6 @@ public class Gameplay : MonoBehaviour
 
         if (levelData == null) levelData = _levelData;
 
-
-
-        Debug.Log(levelData);
-        Debug.Log(_levelData);
         DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
         LeanTween.delayedCall(
             delay,
