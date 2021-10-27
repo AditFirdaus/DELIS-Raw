@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Personal Collections
   m_EditorClassIdentifier: 
   packName: Personal Collections
-  cost: 50
+  cost: 3000
   levelDatas:
   - {fileID: 11400000, guid: 5d0b5a4811372e64ea5da004ce500f64, type: 2}
   - {fileID: 11400000, guid: dda844b54c008314181517f93cefa0a4, type: 2}

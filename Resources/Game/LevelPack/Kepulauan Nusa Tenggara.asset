@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kepulauan Nusa Tenggara
   m_EditorClassIdentifier: 
   packName: Kepulauan Nusa Tenggara
-  cost: 10000
+  cost: 999999999
   levelDatas:
   - {fileID: 11400000, guid: c5b7078094218604483516d44c92a4ba, type: 2}
   - {fileID: 11400000, guid: 9b94b6a2cbd5bd44da1e872f57c952d5, type: 2}

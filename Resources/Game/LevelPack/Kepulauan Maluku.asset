@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kepulauan Maluku
   m_EditorClassIdentifier: 
   packName: Kepulauan Maluku
-  cost: 10000
+  cost: 999999999
   levelDatas:
   - {fileID: 11400000, guid: ebf079d44991526429a75f6fe960b9be, type: 2}
   - {fileID: 11400000, guid: c3d21f9a1ce88d64194f0ed4a6923370, type: 2}

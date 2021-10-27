@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Kalimantan
   m_EditorClassIdentifier: 
   packName: Kalimantan
-  cost: 10000
+  cost: 999999999
   levelDatas:
   - {fileID: 11400000, guid: a9053a94f5f6a4c49bdf90dd12e0b846, type: 2}
   - {fileID: 11400000, guid: 1f9774430fc512542b4040fafd359352, type: 2}

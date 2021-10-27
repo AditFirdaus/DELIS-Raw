@@ -82,7 +82,7 @@ public static class SLS
         {
             string directoryPath = path;
 
-            Directory.CreateDirectory(Path.GetDirectoryName(directoryPath));
+            Directory.CreateDirectory(directoryPath);
 
             Debug.Log($"Directory Created on {directoryPath}");
 
@@ -92,6 +92,7 @@ public static class SLS
         {
             Debug.Log("Create Directory Failed");
             state = false;
+            throw;
         }
 
         return state;
