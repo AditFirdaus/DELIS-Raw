@@ -58,6 +58,7 @@ public class SplashGUI : MonoBehaviour
         Title.LeanAlpha(1, 0.5f).setDelay(1).setOnComplete(
             () =>
             {
+                Title.interactable = true;
                 touchButton.interactable = true;
             }
         );

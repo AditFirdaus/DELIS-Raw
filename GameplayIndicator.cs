@@ -1,25 +1,38 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameplayIndicator : MonoBehaviour
 {
-    public Vector3 offset;
-    public int currentOffset;
-    public int noteOffset;
-    public GameObject indicator;
-
-    public void Indicate()
+    public float intensity = 0;
+    public float distance = 0;
+    public float time = 0;
+    public LeanTweenType easeType = LeanTweenType.easeOutExpo;
+    public GameObject Navigator;
+    public AudioSource audioSource;
+    public NotePlayer notePlayer;
+    public void MoveToNoteIndex(int i)
     {
-        NotePlayer notePlayer = Gameplay.main.notePlayer;
-        Note current = notePlayer.noteAnalyzer.notes[
-                Mathf.Clamp(notePlayer.noteAnalyzer.index + currentOffset, 0, notePlayer.noteAnalyzer.notes.Length - 1)
-            ];
-        Note next = notePlayer.noteAnalyzer.notes[
-                Mathf.Clamp(notePlayer.noteAnalyzer.index + noteOffset, 0, notePlayer.noteAnalyzer.notes.Length - 1)
-            ];
-        indicator.LeanMove(next.data.world, next.globalTime - current.globalTime);
+        MoveToNote(notePlayer.GetNote(i + 1));
+    }
+    public void MoveToNote(Note note)
+    {
+        CalculateIntensity(note);
+
+        gameObject.LeanCancel();
+        gameObject.LeanMove(note.data.world, note.data.time - audioSource.time).setEase(easeType);
+    }
+
+    public void CalculateIntensity(Note note)
+    {
+        distance = Vector2.Distance(
+            gameObject.transform.position,
+            note.data.world
+        );
+
+        time = note.data.time - audioSource.time;
+
+        intensity = distance / time;
     }
 
 }

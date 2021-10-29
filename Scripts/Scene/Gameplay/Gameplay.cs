@@ -9,6 +9,8 @@ using UnityEngine.UIElements;
 
 public class Gameplay : MonoBehaviour
 {
+    public static GameplayStats gameplayStats;
+
     public static float delay = 0;
     public static Gameplay main;
     public static LevelData levelData;
@@ -16,7 +18,7 @@ public class Gameplay : MonoBehaviour
     public AudioSource audioSource;
     public NotePlayer notePlayer;
 
-    public CanvasGroup gameplayGUI;
+    public GameplayGUI gameplayGUI;
 
     public NoteRegister[] noteRegisters;
 
@@ -27,7 +29,7 @@ public class Gameplay : MonoBehaviour
     {
         main = this;
         gameplayGUI.transform.localScale = Vector3.one * 1.5f;
-        gameplayGUI.alpha = 0;
+        gameplayGUI.canvasGroup.alpha = 0;
 
         if (levelData == null) levelData = _levelData;
     }
@@ -42,12 +44,13 @@ public class Gameplay : MonoBehaviour
 
     private void Start()
     {
+        Player.Load(Game.player);
 
         GameplayData.Reset();
 
         if (levelData == null) levelData = _levelData;
 
-        DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
+        gameplayGUI.DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
         LeanTween.delayedCall(
             delay,
             StartGame
@@ -63,12 +66,11 @@ public class Gameplay : MonoBehaviour
         audioSource.clip = levelData.musicClip;
         notePlayer.noteMap = levelData.noteMap;
 
+        notePlayer.Activate();
+
         Score.totalNotes = levelData.noteMap.TotalNotes();
 
-        if (Game.player.autohit) notePlayer.autohit = true;
-
-
-        GameplayGUI.main.SCountdown.Countdown(4, LevelBegin);
+        GameplayGUI.countdownScreen.Countdown(4, LevelBegin);
     }
 
     public void LevelBegin()
@@ -79,9 +81,9 @@ public class Gameplay : MonoBehaviour
     }
     public void LevelEnd()
     {
-        gameplayGUI.interactable = false;
+        gameplayGUI.canvasGroup.interactable = false;
         gameplayGUI.gameObject.LeanCancel();
-        gameplayGUI.LeanAlpha(0, 3).setIgnoreTimeScale(true);
+        gameplayGUI.canvasGroup.LeanAlpha(0, 3).setIgnoreTimeScale(true);
         gameplayGUI.GetComponent<RectTransform>().LeanScale(Vector2.one * 1.25f, 3).setIgnoreTimeScale(true).setEaseInBack().setOnComplete(
             () =>
             {
@@ -90,7 +92,7 @@ public class Gameplay : MonoBehaviour
                 levelCompleteLT = LeanTween.delayedCall(3, () =>
                 {
                     audioSource.Stop();
-                    GameplayGUI.main.SResult.Result();
+                    GameplayGUI.resultScreen.Result();
                 }).setIgnoreTimeScale(true);
             }
         );
@@ -133,11 +135,6 @@ public class Gameplay : MonoBehaviour
         });
     }
 
-    public void DisplayGameplayGUI(Vector2 size, float alpha, LeanTweenType leanTweenType = LeanTweenType.linear)
-    {
-        gameplayGUI.gameObject.LeanCancel();
-        gameplayGUI.gameObject.LeanScale(size, 1).setEase(leanTweenType).setIgnoreTimeScale(true);
-        gameplayGUI.LeanAlpha(alpha, 1f).setIgnoreTimeScale(true);
-    }
+
 
 }

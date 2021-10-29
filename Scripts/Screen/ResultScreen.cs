@@ -9,6 +9,8 @@ public class ResultScreen : MonoBehaviour
     public RectTransform screen;
     public CanvasGroup background;
     public AudioSource audioSource;
+
+
     public void Result()
     {
 

@@ -80,12 +80,14 @@ public class NoteMapCreator : MonoBehaviour
     [ContextMenu("Save NoteMap")]
     public void SaveNoteMap()
     {
+        Debug.Log("Saved");
         SLS.SaveJson<NoteMap>(
             noteMap,
             Application.dataPath,
             $"/Resources/Game/Level/NoteMap/{levelData.packName}",
             $"{levelData.levelName}"
         );
+        Debug.Log("Saved");
     }
 
     public void Add(Vector2 screenPos)

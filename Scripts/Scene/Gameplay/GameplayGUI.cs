@@ -1,61 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameplayGUI : MonoBehaviour
 {
     public static GameplayGUI main;
+    public static CountdownScreen countdownScreen;
+    public static PauseScreen pauseScreen;
+    public static ResultScreen resultScreen;
+
+    [Header("Screens")]
+    public CountdownScreen _countdownScreen;
+    public PauseScreen _pauseScreen;
+    public ResultScreen _resultScreen;
+
 
     [Header("References")]
-    public TMP_Text RCombo;
-    public TMP_Text RScore;
+    public CanvasGroup canvasGroup;
     public TMP_Text RName;
     public TMP_Text RMusic;
     public Image RBackground;
 
-    [Header("Screens")]
-    public PauseScreen SPause;
-    public CountdownScreen SCountdown;
-    public ResultScreen SResult;
-
     private void Awake()
     {
         main = this;
+        countdownScreen = _countdownScreen;
+        pauseScreen = _pauseScreen;
+        resultScreen = _resultScreen;
     }
 
     private void Start()
     {
         UpdateData();
-        GameplayData.OnUpdateCombo.AddListener(UpdateCombo);
-        GameplayData.OnUpdateScore.AddListener(UpdateScore);
-    }
-
-    public void UpdateCombo()
-    {
-        if (GameplayData._combo <= 3)
-        {
-            RCombo.text = "";
-        }
-        else
-        {
-            RCombo.text = GameplayData._combo.ToString();
-        }
-
-
-        RCombo.gameObject.LeanCancel();
-        RCombo.gameObject.LeanScale(Vector3.one, 0);
-        RCombo.gameObject.LeanScale(Vector3.one * 1.25f, 0.5f).setEasePunch();
-
-    }
-    public void UpdateScore()
-    {
-        RScore.text = string.Format("{0:000000}", ((int)GameplayData._score));
-
-        RScore.gameObject.LeanCancel();
-        RScore.gameObject.LeanScaleY(1, 0);
-        RScore.gameObject.LeanScaleY(1.5f, 0.5f).setEasePunch();
     }
 
     public void UpdateData()
@@ -72,5 +51,12 @@ public class GameplayGUI : MonoBehaviour
     {
         RBackground.gameObject.LeanCancel();
         RBackground.gameObject.LeanScale(size, time).setEase(leanTweenType).setIgnoreTimeScale(true);
+    }
+
+    public void DisplayGameplayGUI(Vector2 size, float alpha, LeanTweenType leanTweenType = LeanTweenType.linear)
+    {
+        gameObject.LeanCancel();
+        gameObject.LeanScale(size, 1).setEase(leanTweenType).setIgnoreTimeScale(true);
+        canvasGroup.LeanAlpha(alpha, 1f).setIgnoreTimeScale(true);
     }
 }
