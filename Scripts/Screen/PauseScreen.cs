@@ -33,7 +33,7 @@ public class PauseScreen : MonoBehaviour
         screen.LeanMoveX(0, 1).setEaseOutExpo().setIgnoreTimeScale(true);
 
         gameObject.SetActive(true);
-        GameplayGUI.main.SetBackgroundSize(Vector2.one * 1.25f, 4, LeanTweenType.easeOutExpo);
+        GameplayGUI.main.backgroundManager.ExpandImage(1, LeanTweenType.easeOutExpo);
         gameplayGUI.DisplayGameplayGUI(Vector2.one * 1.25f, 0, LeanTweenType.easeInBack);
         Gameplay.main.Freeze();
     }
@@ -63,7 +63,7 @@ public class PauseScreen : MonoBehaviour
             }
         );
 
-        GameplayGUI.main.SetBackgroundSize(Vector2.one, 4, LeanTweenType.easeOutExpo);
+        GameplayGUI.main.backgroundManager.ShrinkImage(1, LeanTweenType.easeOutExpo);
         gameplayGUI.DisplayGameplayGUI(Vector2.one, 1, LeanTweenType.easeOutBack);
         SCountdown.Countdown(3, UnPause);
     }

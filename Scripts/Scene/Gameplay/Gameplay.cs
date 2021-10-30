@@ -87,7 +87,7 @@ public class Gameplay : MonoBehaviour
         gameplayGUI.GetComponent<RectTransform>().LeanScale(Vector2.one * 1.25f, 3).setIgnoreTimeScale(true).setEaseInBack().setOnComplete(
             () =>
             {
-                GameplayGUI.main.SetBackgroundSize(Vector2.one * 1.25f, 3, LeanTweenType.easeInOutCubic);
+                GameplayGUI.main.backgroundManager.ExpandImage(3, LeanTweenType.easeInOutCubic);
 
                 levelCompleteLT = LeanTween.delayedCall(3, () =>
                 {

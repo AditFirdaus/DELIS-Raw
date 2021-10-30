@@ -104,7 +104,7 @@ public class LoadingScreen : MonoBehaviour
         // Background Panel
         backgroundPanel.fillAmount = 0;
         backgroundPanel.fillOrigin = 0;
-        LeanTween.value(backgroundPanel.gameObject, (float i) => backgroundPanel.fillAmount = i, 0, 1.25f, slicedProcess / 2).setEaseInOutQuart().setDelay(slicedProcess / 2);
+        LeanTween.value(backgroundPanel.gameObject, (float i) => backgroundPanel.fillAmount = i, 0, 1.25f, slicedProcess / 2).setDelay(slicedProcess / 2).setEaseOutExpo();
     }
 
     public void ProcessEnd()
@@ -117,7 +117,7 @@ public class LoadingScreen : MonoBehaviour
 
         // Background Panel
         backgroundPanel.fillOrigin = 1;
-        LeanTween.value(backgroundPanel.gameObject, (float i) => backgroundPanel.fillAmount = i, 1.25f, 0, slicedProcess / 2).setDelay(slicedProcess / 2).setEaseInOutQuart();
+        LeanTween.value(backgroundPanel.gameObject, (float i) => backgroundPanel.fillAmount = i, 1.25f, 0, slicedProcess / 2).setDelay(slicedProcess / 2).setEaseInExpo();
     }
 
     public void AssignTips()

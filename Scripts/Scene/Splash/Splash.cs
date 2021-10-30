@@ -32,17 +32,8 @@ public class Splash : MonoBehaviour
     }
     public void Play()
     {
-        if (Game.player.tutorial) playTutorial();
+        if (Game.player.tutorial) Tutorial.PlayTutorial();
         else LoadingScreen.Load(() => MainMenu.Menu());
     }
 
-    public void playTutorial()
-    {
-        MainMenu.levelPacks = LevelPackExtensions.LoadLevelPacks();
-        LevelSelector.levelPack = levelPack;
-        LevelSelector.levelPack.LoadAllLevelData();
-        LoadingScreen.Load(() => Gameplay.Play(levelData));
-        Game.player.tutorial = false;
-        Game.player.Save();
-    }
 }

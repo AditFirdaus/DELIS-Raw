@@ -8,11 +8,8 @@ public class MainMenuGUI : MonoBehaviour
 {
     public static MainMenuGUI main;
 
-    [Header("Datas")]
-    public Sprite _background;
-
     [Header("References")]
-    public Image R_background;
+    public BackgroundManager backgroundManager;
 
     private void Awake()
     {
@@ -22,17 +19,39 @@ public class MainMenuGUI : MonoBehaviour
     private void Start()
     {
         UpdateUI();
+        RandomizeBackground();
     }
 
     public void UpdateUI()
     {
+
+    }
+
+    public void RandomizeBackground()
+    {
         LevelPack levelPack = MainMenu.levelPacks[Random.Range(0, MainMenu.levelPacks.Length)];
-        LevelData levelData = levelPack.levelDatas[Random.Range(0, levelPack.levelDatas.Length)];
 
+        SetLevelPackBackground(levelPack);
+    }
+
+    public void SetLevelDataBackground(LevelData levelData)
+    {
         levelData.LoadSprite();
-        _background = levelData.levelSprite;
+        SetBackground(levelData.levelSprite);
+    }
 
-        R_background.sprite = _background;
+    public void SetBackground(Sprite sprite)
+    {
+        backgroundManager.image.sprite = sprite;
+        backgroundManager.Flash();
+        backgroundManager.image.rectTransform.localScale = backgroundManager.image.rectTransform.localScale * 2;
+        backgroundManager.ShrinkImage(1f, LeanTweenType.easeOutExpo);
+    }
+
+    public void SetLevelPackBackground(LevelPack levelPack)
+    {
+        LevelData levelData = levelPack.levelDatas[Random.Range(0, levelPack.levelDatas.Length)];
+        SetLevelDataBackground(levelData);
     }
 
     public void Exit()

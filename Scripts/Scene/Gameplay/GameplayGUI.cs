@@ -22,7 +22,7 @@ public class GameplayGUI : MonoBehaviour
     public CanvasGroup canvasGroup;
     public TMP_Text RName;
     public TMP_Text RMusic;
-    public Image RBackground;
+    public BackgroundManager backgroundManager;
 
     private void Awake()
     {
@@ -40,17 +40,11 @@ public class GameplayGUI : MonoBehaviour
     public void UpdateData()
     {
         Gameplay.levelData.LoadData(true);
-        RBackground.transform.localScale = Vector3.one * 1.25f;
-        SetBackgroundSize(Vector2.one, 4, LeanTweenType.easeInOutExpo);
-        RBackground.sprite = Gameplay.levelData.levelSprite;
+        backgroundManager.image.transform.localScale = Vector3.one * 1.25f;
+        backgroundManager.ShrinkImage(4, LeanTweenType.easeInOutExpo);
+        backgroundManager.image.sprite = Gameplay.levelData.levelSprite;
         RName.text = Gameplay.levelData.levelName.ToString();
         RMusic.text = Gameplay.levelData.musicName.ToString();
-    }
-
-    public void SetBackgroundSize(Vector2 size, float time = 4, LeanTweenType leanTweenType = LeanTweenType.linear)
-    {
-        RBackground.gameObject.LeanCancel();
-        RBackground.gameObject.LeanScale(size, time).setEase(leanTweenType).setIgnoreTimeScale(true);
     }
 
     public void DisplayGameplayGUI(Vector2 size, float alpha, LeanTweenType leanTweenType = LeanTweenType.linear)

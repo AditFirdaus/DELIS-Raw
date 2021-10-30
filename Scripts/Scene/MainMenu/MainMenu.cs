@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
         LoadingScreen.ScreenPrefab = loadingScreen;
 
         Player.Load(Game.player);
+
         JPanel.main.UpdatePanel();
         //PlayerPanel.main.UpdatePanel();
 
@@ -35,6 +36,7 @@ public class MainMenu : MonoBehaviour
 
     public void Select(LevelPack pack)
     {
+        MainMenuGUI.main.SetLevelPackBackground(pack);
         levelPack = pack;
     }
 

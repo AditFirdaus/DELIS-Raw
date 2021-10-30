@@ -132,6 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3e7b93684c67a42866fbed362bfcc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autostart: 1
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
   stateIndicator: {fileID: 4808309551534291365, guid: 35cc40138d4891240bb113487e1aa9b7, type: 3}
   state: 3
   animator: {fileID: 3263439553268954879}
