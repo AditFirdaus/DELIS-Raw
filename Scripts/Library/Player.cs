@@ -9,7 +9,7 @@ public class Player
 {
     public string name;
     public Sprite avatar;
-    public int jPoint = 10000;
+    public int jPoint = 3000;
     public bool autohit = false;
     public bool tutorial = true;
     public bool creator = false;

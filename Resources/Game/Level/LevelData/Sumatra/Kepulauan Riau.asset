@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kepulauan Riau
   musicName: Pulau Bintan
-  descriptions: 
+  descriptions: Provinsi Kepulauan Riau terbentuk berdasarkan Undang-undang Nomor
+    25 tahun 2002 merupakan provinsi ke-32 di Indonesia yang mencakup Kota Tanjungpinang,
+    Kota Batam, Kabupaten Bintan, Kabupaten Karimun, Kabupaten Natuna, Kabupaten
+    Kepulauan Anambas dan Kabupaten Lingga.
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

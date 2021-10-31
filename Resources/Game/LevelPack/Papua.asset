@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Papua
   m_EditorClassIdentifier: 
   packName: Papua
-  cost: 2000
+  cost: 4000
   levelDatas:
   - {fileID: 11400000, guid: 1ce27e9500c47a54db09944b9bef8bab, type: 2}
   - {fileID: 11400000, guid: 586e278c8ac952d48908f345a7700834, type: 2}

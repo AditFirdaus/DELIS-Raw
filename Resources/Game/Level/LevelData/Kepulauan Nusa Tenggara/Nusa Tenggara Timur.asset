@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Nusa Tenggara Timur
   musicName: Gemu Fa Mi Re
-  descriptions: 
+  descriptions: Nusa Tenggara Timur merupakan provinsi kepulauan yang terdiri atas
+    1.192 pulau yang sebagian besar pulau tersebut tidak berpenghuni. Lima pulau
+    besar di NTT dikenal dengan nama 'Flobamorata' yang terdiri atas Pulau Flores,
+    Sumba, Timor, Alor dan Lembata.
   source: Lagu Daerah Indonesia
   packName: Kepulauan Nusa Tenggara
   noteMap:

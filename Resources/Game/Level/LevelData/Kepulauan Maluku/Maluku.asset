@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Maluku
   musicName: Burung Kakaktua
-  descriptions: 
+  descriptions: Maluku adalah sebuah provinsi yang meliputi bagian selatan Kepulauan
+    Maluku, Indonesia. Provinsi ini berbatasan dengan Laut Seram di utara, Samudra
+    Hindia dan Laut Arafura di selatan, Papua di timur, dan Sulawesi di barat. Ibu
+    kota dan kota terbesarnya ialah kota Ambon.
   source: Lagu Daerah Indonesia
   packName: Kepulauan Maluku
   noteMap:

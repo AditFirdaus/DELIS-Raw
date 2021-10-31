@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Papua Barat
   musicName: E Mambo Simbo
-  descriptions: 
+  descriptions: Papua Barat (disingkat Pabar atau PB; dahulu Irian Jaya Barat) adalah
+    sebuah provinsi Indonesia yang terletak di ujung barat Pulau Papua.Ibukota provinsi
+    ini terletak di Manokwari dengan kota terbesarnya di Sorong. Provinsi ini dimekarkan
+    dari Provinsi Papua melalui Undang-Undang Nomor 45 Tahun 1999.
   source: Lagu Daerah Indonesia
   packName: Papua
   noteMap:

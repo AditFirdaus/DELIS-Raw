@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Papua
   musicName: Sajojo
-  descriptions: 
+  descriptions: Papua adalah sebuah provinsi di Indonesia yang terletak di pulau
+    Nugini bagian barat atau west New Guinea. Papua juga sering disebut sebagai Papua
+    Barat karena Papua bisa merujuk kepada seluruh pulau Nugini termasuk belahan
+    timur negara tetangga, east New Guinea atau Papua Nugini.
   source: Lagu Daerah Indonesia
   packName: Papua
   noteMap:

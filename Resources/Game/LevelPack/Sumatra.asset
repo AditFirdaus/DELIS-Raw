@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sumatra
   m_EditorClassIdentifier: 
   packName: Sumatra
-  cost: 10000
+  cost: 20000
   levelDatas:
   - {fileID: 11400000, guid: 751c460c0bea38645adf1fc3fdb0d6de, type: 2}
   - {fileID: 11400000, guid: edc81cbbc8a14654f8044ba20de2fb94, type: 2}

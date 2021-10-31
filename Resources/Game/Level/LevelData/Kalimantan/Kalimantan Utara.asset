@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kalimantan Utara
   musicName: Bebilin
-  descriptions: 
+  descriptions: Kalimantan Utara (disingkat Kaltara) adalah sebuah provinsi di Indonesia
+    yang terletak di bagian utara Pulau Kalimantan. Provinsi ini berbatasan langsung
+    dengan negara tetangga Malaysia, yaitu Negara Bagian Sabah dan Sarawak.
   source: Lagu Daerah Indonesia
   packName: Kalimantan
   noteMap:

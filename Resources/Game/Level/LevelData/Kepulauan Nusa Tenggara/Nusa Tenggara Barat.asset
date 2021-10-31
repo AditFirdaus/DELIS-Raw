@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Nusa Tenggara Barat
   musicName: Kadal Nongak
-  descriptions: 
+  descriptions: Nusa Tenggara Barat (disingkat NTB) ialah sebuah provinsi di Indonesia
+    yang berada di bagian Barat Kepulauan Nusa Tenggara. Ibu kota provinsi ini berada
+    di kota Mataram. ... Dua pulau terbesar di provinsi ini adalah Lombok yang terletak
+    di barat dan Sumbawa yang terletak di timur.
   source: Lagu Daerah Indonesia
   packName: Kepulauan Nusa Tenggara
   noteMap:

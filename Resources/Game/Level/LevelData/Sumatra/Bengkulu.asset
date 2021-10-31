@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Bengkulu
   musicName: Ikan Pais
-  descriptions: 
+  descriptions: "Bengkulu merupakan Provinsi di Sumatera yang terletak pada koordinat
+    5\xB040' \u2013 2\xB0 0' LS 40' \u2013 104\xB0 0' BT dengan luas area sebesar
+    19.788.70 km2 (7,640,46 ) yang berbatasan dengan : Utara : Sumatera Barat. Selatan
+    : Lampung. Barat : Samudra Hindia."
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kalimantan Selatan
   musicName: Sapu Tangan Babuncu Ampat
-  descriptions: 
+  descriptions: "Kalimantan Selatan (disingkat Kalsel) adalah salah satu provinsi
+    yang ada di Indonesia yang terletak di pulau Kalimantan.Provinsi ini merupakan
+    rumah etnis Banjar dan memiliki luas 38.744,00 km\xB2 dengan populasi ditahun
+    2020 berjumlah 4.087.894 jiwa, dan wilayah administrasi terbagi menjadi 11 kabupaten
+    dan 2 kota."
   source: Lagu Daerah Indonesia
   packName: Kalimantan
   noteMap:

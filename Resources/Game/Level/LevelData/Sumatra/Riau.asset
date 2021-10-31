@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Riau
   musicName: Segantang Lada
-  descriptions: 
+  descriptions: Riau merupakan salah satu provinsi terbesar di Pulau Sumatera yang
+    kental dengan kultur budaya khas melayu. Daerah ini juga strategis karena terletak
+    di jalur perdagangan internasional Selat Malaka dan berada di segitiga pertumbuhan
+    ekonomi tiga negara, Indonesia, Malaysia, dan Thailand.
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

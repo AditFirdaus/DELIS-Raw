@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Lampung
   musicName: Lipang Lipang Dang
-  descriptions: 
+  descriptions: Lampung adalah provinsi paling selatan di Pulau Sumatera. Daerah
+    yang kini dihuni sekitar 8,03 juta jiwa ini amat strategis karena menjadi pintu
+    gerbang lintas Jawa-Sumatera. Lampung dulu satu di antara empat keresidenan dalam
+    daerah Provinsi Sumatera Selatan.
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:
