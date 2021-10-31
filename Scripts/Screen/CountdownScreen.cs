@@ -51,7 +51,7 @@ public class CountdownScreen : MonoBehaviour
     {
         Rcountdown.gameObject.SetActive(false);
         background.gameObject.LeanCancel();
-        background.LeanAlpha(1, 0).setIgnoreTimeScale(true);
+        background.alpha = 1;
 
 
 

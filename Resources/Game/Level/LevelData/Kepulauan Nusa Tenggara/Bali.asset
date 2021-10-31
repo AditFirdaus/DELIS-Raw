@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Bali
   musicName: Ratu Anom
-  descriptions: 
+  descriptions: Pulau Bali adalah bagian dari Kepulauan Sunda Kecil sepanjang 153
+    km dan selebar 112 km sekitar 3,2 km dari Pulau Jawa.Provinsi Bali memiliki 4
+    (empat) buah danau yang berlokasi di daerah pegunungan, yaitu Danau Beratan atau
+    Bedugul, Buyan, Tamblingan, dan Batur.
   source: Lagu Daerah Indonesia
   packName: Kepulauan Nusa Tenggara
   noteMap:

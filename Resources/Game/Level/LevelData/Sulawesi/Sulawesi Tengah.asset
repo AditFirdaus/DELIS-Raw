@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sulawesi Tengah
   musicName: Palu Ngataku
-  descriptions: 
+  descriptions: "Sulawesi Tengah (disingkat Sulteng) adalah sebuah provinsi di bagian
+    tengah Pulau Sulawesi, Indonesia. Ibu kota provinsi ini adalah Kota Palu. Luas
+    wilayahnya 61.841,29 km\xB2, dan jumlah penduduk sebanyak 2.985.734 jiwa (2020)."
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:

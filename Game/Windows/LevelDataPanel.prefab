@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2825813037172547331}
   - component: {fileID: 3386344218954059262}
   - component: {fileID: 1966800610177091975}
+  - component: {fileID: 7922254045332830849}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -77,6 +78,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7922254045332830849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615296326201241002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_EffectDistance: {x: 10, y: -10}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2290702251912963544
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,11 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b952910d98abfb641a1877236f437409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
   levelData: {fileID: 0}
   canvasGroup: {fileID: 550144048996864353}
   RName: {fileID: 2167361163343827132}
   RMusic: {fileID: 8912576184957915914}
-  lineImage: {fileID: 3786471277648446221}
 --- !u!225 &550144048996864353
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -279,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

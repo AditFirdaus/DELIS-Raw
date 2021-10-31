@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sulawesi Selatan
   musicName: Tondok Kadadiangku
-  descriptions: 
+  descriptions: Sulawesi Selatan (disingkat Sulsel) adalah sebuah provinsi di Indonesia
+    yang terletak di bagian selatan Sulawesi. Ibu kotanya adalah Makassar. Provinsi
+    ini berbatasan dengan Sulawesi Tengah dan Sulawesi Barat di utara, Teluk Bone
+    dan Sulawesi Tenggara di timur, Selat Makassar di barat dan Laut Flores di selatan.
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:

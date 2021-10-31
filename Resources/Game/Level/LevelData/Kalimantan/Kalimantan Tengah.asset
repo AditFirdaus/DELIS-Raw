@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kalimantan Tengah
   musicName: Tumpi Wayu
-  descriptions: 
+  descriptions: Provinsi Kalimantan Tengah terletak di tengah gugus kepulauan Indonesia.
+    Sebagai provinsi terluas kedua di Indonesia, daerah ini menyimpan sejuta pesona.
+    Mulai dari alam, orang utan, hingga kehidupan penduduk asli suku Dayak yang lengkap
+    dengan upacara adat hingga kisah kepahlawanan Tjilik Riwut.
   source: Lagu Daerah Indonesia
   packName: Kalimantan
   noteMap:

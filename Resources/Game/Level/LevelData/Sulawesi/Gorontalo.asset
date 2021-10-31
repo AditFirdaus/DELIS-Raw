@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Gorontalo
   musicName: Binde Biluhuta
-  descriptions: 
+  descriptions: Gorontalo merupakan provinsi hasil pemekaran dari Sulawesi Utara.Provinsi
+    ini dikenal pula sebagai provinsi di wilayah bagian utara Pulau Sulawesi yang
+    mayoritas penduduknya beragama Islam. Oleh karena itu, provinsi ini sering mendapat
+    sebutan Bumi Serambi Madinah.
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:

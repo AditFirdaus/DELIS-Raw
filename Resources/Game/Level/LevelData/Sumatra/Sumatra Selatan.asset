@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sumatra Selatan
   musicName: Cuk Mak Ilang
-  descriptions: 
+  descriptions: Provinsi Sumatra Selatan dikenal juga dengan sebutan "Bumi Sriwijaya".
+    Pada abad ke-7 hingga abad ke-12 Masehi wilayah ini merupakan pusat Kerajaan
+    Sriwijaya yang juga terkenal dengan kerajaan maritim terbesar dan terkuat di
+    Nusantara.Sejak abad ke-13 sampai abad ke-14, wilayah ini berada di bawah kekuasaan
+    Majapahit.
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

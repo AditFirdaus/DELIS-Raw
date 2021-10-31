@@ -40,7 +40,7 @@ public class ResultScreen : MonoBehaviour
 
     public void ApplyReward(float score)
     {
-        int reward = (int)((score / 1000000) * 5000);
+        int reward = (int)((score / 1000000) * 2500);
         Game.player.jPoint += reward;
         Game.player.Save();
     }

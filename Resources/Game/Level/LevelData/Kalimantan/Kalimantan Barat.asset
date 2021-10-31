@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kalimantan Barat
   musicName: Cik Cik Periuk
-  descriptions: 
+  descriptions: Kalimantan Barat (disingkat Kalbar) adalah sebuah provinsi di Indonesia,
+    yang berada di pulau Kalimantan, dengan ibu kota atau pusat pemerintahan berada
+    di kota Pontianak.
   source: Lagu Daerah Indonesia
   packName: Kalimantan
   noteMap:

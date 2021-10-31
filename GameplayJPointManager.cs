@@ -15,10 +15,10 @@ public class GameplayJPointManager : MonoBehaviour
 
     public void Validate()
     {
-        if (GameplayData.highCombo >= highestCombo)
+        if (GameplayData._combo >= highestCombo)
         {
             Expand();
-            JPanel.main.AddValue(50);
+            JPanel.main.AddValue(Random.Range(25, 100));
 
             gameObject.LeanDelayedCall(2, () => Shrink());
             highestCombo += addHighest;

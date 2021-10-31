@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Kalimantan Timur
   musicName: Buah Bolok
-  descriptions: 
+  descriptions: Kalimantan Timur (disingkat Kaltim) adalah sebuah provinsi Indonesia
+    di Pulau Kalimantan bagian ujung timur yang berbatasan dengan Malaysia, Kalimantan
+    Utara, Kalimantan Tengah, Kalimantan Selatan, Kalimantan Barat, dan Sulawesi.
   source: Lagu Daerah Indonesia
   packName: Kalimantan
   noteMap:

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Jambi
   musicName: Pinang Muda
-  descriptions: 
+  descriptions: "Kota Jambi (Melayu: \u0643\u0648\u062A\u0627 \u062C\u0645\u0628\u064A)
+    adalah sebuah kota yang berada di pulau Sumatra, Indonesia dan sekaligus merupakan
+    ibukota dari provinsi Jambi. Kota Jambi dibelah oleh sungai terpanjang di Sumatera
+    yang bernama Batanghari, kedua kawasan tersebut terhubung oleh jembatan Aur Duri."
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

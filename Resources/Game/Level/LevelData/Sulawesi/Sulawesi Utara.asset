@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sulawesi Utara
   musicName: Esa Mokan
-  descriptions: 
+  descriptions: Sulawesi Utara (disingkat Sulut) adalah salah satu provinsi yang
+    terletak di ujung utara Pulau Sulawesi, Indonesia, dengan ibu kota terletak di
+    kota Manado.
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:

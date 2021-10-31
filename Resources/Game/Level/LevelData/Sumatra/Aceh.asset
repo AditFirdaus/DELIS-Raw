@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Aceh
   musicName: Jambo Jambo
-  descriptions: 
+  descriptions: "Aceh (abjad Jawo\xEB: \u0627\u0686\u064A\u0647 \u062F\u0627\u0631\u0627\u0644\u0633\u0644\u0627\u0645)
+    adalah sebuah provinsi di Indonesia yang ibu kotanya berada di Banda Aceh. Aceh
+    terletak di ujung utara pulau Sumatra dan merupakan provinsi paling barat di
+    Indonesia. Menurut hasil sensus Badan Pusat Statistik tahun 2020, jumlah penduduk
+    provinsi ini sekitar 5.274.871 jiwa.Aceh (abjad Jawo\xEB: \u0627\u0686\u064A\u0647
+    \u062F\u0627\u0631\u0627\u0644\u0633\u0644\u0627\u0645) adalah sebuah provinsi
+    di Indonesia yang ibu kotanya berada di Banda Aceh. Aceh terletak di ujung utara
+    pulau Sumatra dan merupakan provinsi paling barat di Indonesia. Menurut hasil
+    sensus Badan Pusat Statistik tahun 2020, jumlah penduduk provinsi ini sekitar
+    5.274.871 jiwa."
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

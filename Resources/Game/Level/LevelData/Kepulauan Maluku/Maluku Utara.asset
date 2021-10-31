@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Maluku Utara
   musicName: Borero
-  descriptions: 
+  descriptions: Maluku Utara (disingkat Malut) merupakan provinsi bagian Timur Indonesia
+    yang resmi terbentuk pada 4 Oktober 1999 yang sebelumnya menjadi kabupaten dari
+    provinsi Maluku bersama dengan Halmahera Tengah, berdasarkan UU RI Nomor 46 Tahun
+    1999 dan UU RI Nomor Tahun 2003. Jumlah penduduk Maluku Utara pada tahun 2021.
   source: Lagu Daerah Indonesia
   packName: Kepulauan Maluku
   noteMap:

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sumatra Barat
   musicName: Anak Daro
-  descriptions: 
+  descriptions: "Sumatra Barat terletak di pesisir barat di bagian tengah pulau Sumatra
+    yang terdiri dari dataran rendah di pantai barat dan dataran tinggi vulkanik
+    yang dibentuk oleh Bukit Barisan. Provinsi ini memiliki daratan seluas 42.297,30
+    km\xB2 yang setara dengan 2,17% luas Indonesia."
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:

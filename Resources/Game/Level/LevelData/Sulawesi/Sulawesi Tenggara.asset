@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sulawesi Tenggara
   musicName: Tana Wolio
-  descriptions: 
+  descriptions: "Provinsi Sulawesi Tenggara terletak di Jazirah Tenggara Pulau Sulawesi,
+    secara geografis terletak di bagian selatan garis khatulistiwa di antara 02\xB045'
+    \u2013 06\xB015' Lintang Selatan dan 120\xB045' \u2013 124\xB030' Bujur Timur
+    serta mempunyai wilayah daratan seluas 38.140 km\xB2 (3.814.000 ha) dan perairan
+    (laut) seluas 110.000 km\xB2."
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:

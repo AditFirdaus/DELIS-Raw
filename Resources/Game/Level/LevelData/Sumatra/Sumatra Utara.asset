@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sumatra Utara
   musicName: Sik Sik Sibatumanikam
-  descriptions: 
+  descriptions: Sumatera Utara adalah sebuah provinsi yang terletak di Pulau Sumatera,
+    berbatasan dengan Aceh di sebelah utara dan dengan Sumatera Barat serta Riau
+    di sebelah selatan. Provinsi ini terutama merupakan kampung halaman suku bangsa
+    Batak, yang hidup di pegunungan dan suku bangsa Melayu yang hidup di daerah pesisir
+    timur.
   source: Lagu Daerah Indonesia
   packName: Sumatra
   noteMap:
