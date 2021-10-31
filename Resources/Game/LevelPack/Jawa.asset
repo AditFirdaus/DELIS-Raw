@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jawa
   m_EditorClassIdentifier: 
   packName: Jawa
-  cost: 2000
+  cost: 6000
   levelDatas:
   - {fileID: 11400000, guid: 2559cecfcb82d1541b660f8d39bf733b, type: 2}
   - {fileID: 11400000, guid: 0f5165d65a1e8fd4b94e3a1082f56df7, type: 2}

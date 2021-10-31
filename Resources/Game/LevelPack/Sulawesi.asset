@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sulawesi
   m_EditorClassIdentifier: 
   packName: Sulawesi
-  cost: 999999999
+  cost: 6000
   levelDatas:
   - {fileID: 11400000, guid: 92eb32f9fb4ca0b4281a92b68306f441, type: 2}
   - {fileID: 11400000, guid: 88740836ae6eb88488a82edac041a95d, type: 2}

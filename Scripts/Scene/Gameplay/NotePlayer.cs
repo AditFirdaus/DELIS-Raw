@@ -41,7 +41,8 @@ public class NotePlayer : MonoBehaviour
     public void Spawn(Note note)
     {
         GameObject instance = GameObject.Instantiate(note.pack.register.instance, (Vector3)note.data.world + Vector3.forward * spawnDistance, Quaternion.identity, noteArea);
-        gameObject.LeanMoveLocalZ(0, 1);
+
+        instance.LeanMoveLocalZ(0, 1);
 
         GameNote gameNote = instance.GetComponent<GameNote>();
         if (gameNote)

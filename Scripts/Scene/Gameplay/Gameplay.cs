@@ -114,7 +114,6 @@ public class Gameplay : MonoBehaviour
         if (Splash.main.buttonClick1) LeanAudio.play(Splash.main.buttonClick1);
         Time.timeScale = 1;
         Play(levelData);
-        //LoadingScreen.Load(() => );
     }
     public void Back()
     {

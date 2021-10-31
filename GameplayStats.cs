@@ -16,7 +16,7 @@ public class GameplayStats : MonoBehaviour
 
     public void UpdateCombo()
     {
-        if (GameplayData._combo <= 3)
+        if (GameplayData._combo < 3)
         {
             RCombo.text = "";
         }

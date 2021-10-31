@@ -63,9 +63,9 @@ public class LevelPackWindow : MonoBehaviour
 
     public void Buy()
     {
-        levelPack.Buy();
+        DialogManager.main.purchaseDialog.TryToPurchase(this);
         Initialize();
-        JPanel.main.UpdatePanel();
+
     }
 
     public void Select()

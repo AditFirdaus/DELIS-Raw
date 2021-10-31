@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using JetBrains.Annotations;
+using UnityEditor;
 using UnityEngine;
 
 public static class LevelPackExtensions
@@ -35,17 +36,38 @@ public static class LevelPackExtensions
             levelPack.LoadData();
         }
     }
-
-    public static void Buy(this LevelPack levelPack)
+    public static bool CanBuy(this LevelPack levelPack)
     {
         if (Game.player.jPoint >= levelPack.cost && !levelPack.data.purchased)
         {
-            Game.player.jPoint -= levelPack.cost;
-            levelPack.data.purchased = true;
-            levelPack.SaveData();
-
-            Game.player.Save();
+            return true;
         }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static bool Buy(this LevelPack levelPack)
+    {
+        if (levelPack.CanBuy())
+        {
+            Game.player.jPoint -= levelPack.cost;
+            levelPack.Unlock();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static void Unlock(this LevelPack levelPack)
+    {
+        levelPack.data.purchased = true;
+        levelPack.SaveData();
+
+        Game.player.Save();
     }
 
     public static void LoadLevelData(this LevelPack levelPack)

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GameplayIndicator : MonoBehaviour
 {
-    public float intensity = 0;
-    public float distance = 0;
-    public float time = 0;
     public LeanTweenType easeType = LeanTweenType.easeOutExpo;
     public GameObject Navigator;
     public AudioSource audioSource;
@@ -17,22 +14,9 @@ public class GameplayIndicator : MonoBehaviour
     }
     public void MoveToNote(Note note)
     {
-        CalculateIntensity(note);
 
         gameObject.LeanCancel();
         gameObject.LeanMove(note.data.world, note.data.time - audioSource.time).setEase(easeType);
-    }
-
-    public void CalculateIntensity(Note note)
-    {
-        distance = Vector2.Distance(
-            gameObject.transform.position,
-            note.data.world
-        );
-
-        time = note.data.time - audioSource.time;
-
-        intensity = distance / time;
     }
 
 }
