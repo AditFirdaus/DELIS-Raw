@@ -44,7 +44,7 @@ public class MainMenuGUI : MonoBehaviour
     {
         backgroundManager.image.sprite = sprite;
         backgroundManager.Flash();
-        backgroundManager.image.rectTransform.localScale = backgroundManager.image.rectTransform.localScale * 2;
+        backgroundManager.image.rectTransform.localScale = backgroundManager.image.rectTransform.localScale * 1.25f;
         backgroundManager.ShrinkImage(1f, LeanTweenType.easeOutExpo);
     }
 

@@ -7,7 +7,7 @@ public class GameplayJPointManager : MonoBehaviour
     public RectTransform rectTransform;
     public CanvasGroup canvasGroup;
     public int highestCombo = 10;
-    public int addHighest = 5;
+    public int addHighest = 10;
     private void Awake()
     {
         GameplayData.OnUpdateCombo.AddListener(Validate);
@@ -18,7 +18,7 @@ public class GameplayJPointManager : MonoBehaviour
         if (GameplayData._combo >= highestCombo)
         {
             Expand();
-            JPanel.main.AddValue(Random.Range(25, 100));
+            JPanel.main.AddValue(Random.Range(15, 25));
 
             gameObject.LeanDelayedCall(2, () => Shrink());
             highestCombo += addHighest;

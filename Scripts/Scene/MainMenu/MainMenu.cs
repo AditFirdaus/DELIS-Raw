@@ -49,9 +49,9 @@ public class MainMenu : MonoBehaviour
         LoadingScreen.Load(() => LevelSelector.Enter(levelPack));
     }
 
-    public void Exit()
+    public void PlayTutorial()
     {
-        Application.Quit();
+        LoadingScreen.Load(() => Tutorial.PlayTutorial());
     }
 
 }

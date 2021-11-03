@@ -32,7 +32,7 @@ public class Splash : MonoBehaviour
     }
     public void Play()
     {
-        if (Game.player.tutorial) Tutorial.PlayTutorial();
+        if (Game.player.tutorial) LoadingScreen.Load(() => Tutorial.PlayTutorial());
         else LoadingScreen.Load(() => MainMenu.Menu());
     }
 

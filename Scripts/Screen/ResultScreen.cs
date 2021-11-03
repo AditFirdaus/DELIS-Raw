@@ -24,7 +24,7 @@ public class ResultScreen : MonoBehaviour
         ApplyResult();
         gameObject.SetActive(true);
 
-        userStats.UpdateStats(Gameplay.levelData);
+        userStats.UpdateProperties(GameplayData.highCombo, GameplayData.highScore);
     }
 
     public void ApplyResult()
@@ -40,7 +40,7 @@ public class ResultScreen : MonoBehaviour
 
     public void ApplyReward(float score)
     {
-        int reward = (int)((score / 1000000) * 2500);
+        int reward = (int)((score / 1000000) * 2000);
         Game.player.jPoint += reward;
         Game.player.Save();
     }

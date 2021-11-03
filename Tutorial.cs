@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Tutorial : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioSource audioSource;
     public TutorialPhase[] tutorialPhases;
+
+    public Button Skip;
 
     public float beginDelay;
 
@@ -21,12 +24,17 @@ public class Tutorial : MonoBehaviour
 
     private void Start()
     {
+        Player.Load(Game.player);
+
+        if (!Game.player.tutorial) Skip.gameObject.SetActive(true);
+        else Skip.gameObject.SetActive(false);
+
         StartCoroutine(StartPhases());
     }
 
     public static void PlayTutorial()
     {
-        LoadingScreen.Load(() => SceneManager.LoadScene("Tutorial"));
+        SceneManager.LoadScene("Tutorial");
     }
 
     public IEnumerator StartPhases()
@@ -51,6 +59,7 @@ public class Tutorial : MonoBehaviour
 
     public void EndTutorial()
     {
+        Skip.interactable = false;
         audioSource.LeanVolume(0.5f, 0, 3).setOnComplete(
             () => Menu()
         );
