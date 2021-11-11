@@ -49,8 +49,6 @@ public class NotePlayer : MonoBehaviour
         {
             gameNote.note = note;
         }
-
-        if (Game.player.autohit) LeanTween.delayedCall(-note.pack.register.offset, () => GameplayInput.RayInput(Camera.main.ViewportToScreenPoint(note.data.viewport)));
     }
 
     public Note GetNote(int index = -1)

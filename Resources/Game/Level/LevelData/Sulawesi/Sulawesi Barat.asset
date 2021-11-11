@@ -14,11 +14,363 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: Sulawesi Barat
   musicName: Tenggang Tenggang Lopi
-  descriptions: "F.\tSulawesi Barat atau disingkat Sulbar adalah sebuah provinsi
-    di Indonesia yang terletak di bagian barat Sulawesi. Provinsi dengan luas wilayah
-    16.787,18 kilometer persegi ini merupakan provinsi hasil pemekaran dari Provinsi
-    Sulawesi Selatan."
+  descriptions: Sulawesi Barat atau disingkat Sulbar adalah sebuah provinsi di Indonesia
+    yang terletak di bagian barat Sulawesi. Provinsi dengan luas wilayah 16.787,18
+    kilometer persegi ini merupakan provinsi hasil pemekaran dari Provinsi Sulawesi
+    Selatan.
   source: Lagu Daerah Indonesia
   packName: Sulawesi
   noteMap:
-    notePacks: []
+    notePacks:
+    - registerIndex: 0
+      datas:
+      - time: 4.266644
+        viewport: {x: 0.15373352, y: 0.7057292}
+      - time: 7.786644
+        viewport: {x: 0.21229868, y: 0.46614584}
+      - time: 11.519978
+        viewport: {x: 0.3477306, y: 0.59244794}
+      - time: 15.25331
+        viewport: {x: 0.4407028, y: 0.38541666}
+      - time: 17.194649
+        viewport: {x: 0.55636895, y: 0.6276042}
+      - time: 19.007982
+        viewport: {x: 0.636164, y: 0.4153646}
+      - time: 19.92533
+        viewport: {x: 0.7445095, y: 0.5807292}
+      - time: 20.437325
+        viewport: {x: 0.6830161, y: 0.69401044}
+      - time: 20.927982
+        viewport: {x: 0.45241582, y: 0.6848958}
+      - time: 22.741316
+        viewport: {x: 0.15739386, y: 0.77213544}
+      - time: 23.658663
+        viewport: {x: 0.193265, y: 0.375}
+      - time: 24.661316
+        viewport: {x: 0.42240116, y: 0.62890625}
+      - time: 25.557323
+        viewport: {x: 0.522694, y: 0.4752604}
+      - time: 26.47465
+        viewport: {x: 0.7320644, y: 0.65625}
+      - time: 27.413311
+        viewport: {x: 0.85212296, y: 0.43489584}
+      - time: 28.37331
+        viewport: {x: 0.47877014, y: 0.45052084}
+      - time: 29.717325
+        viewport: {x: 0.22693998, y: 0.703125}
+      - time: 30.22932
+        viewport: {x: 0.20644216, y: 0.4778646}
+      - time: 31.082653
+        viewport: {x: 0.29062957, y: 0.3138021}
+      - time: 32.085327
+        viewport: {x: 0.73792094, y: 0.51432294}
+      - time: 33.10932
+        viewport: {x: 0.83821374, y: 0.7239583}
+      - time: 34.00533
+        viewport: {x: 0.58711565, y: 0.73307294}
+      - time: 34.474648
+        viewport: {x: 0.3828697, y: 0.69661456}
+      - time: 34.96533
+        viewport: {x: 0.18081991, y: 0.75390625}
+      - time: 35.41331
+        viewport: {x: 0.11713031, y: 0.7135417}
+      - time: 35.882652
+        viewport: {x: 0.1193265, y: 0.4049479}
+      - time: 36.56533
+        viewport: {x: 0.24377745, y: 0.3203125}
+      - time: 37.33331
+        viewport: {x: 0.37774524, y: 0.52213544}
+      - time: 37.802654
+        viewport: {x: 0.5307467, y: 0.67578125}
+      - time: 38.677322
+        viewport: {x: 0.61127377, y: 0.390625}
+      - time: 39.637325
+        viewport: {x: 0.7452416, y: 0.6822917}
+      - time: 40.36265
+        viewport: {x: 0.87262076, y: 0.2747396}
+      - time: 41.599976
+        viewport: {x: 0.54831624, y: 0.46875}
+      - time: 42.474648
+        viewport: {x: 0.40556368, y: 0.66015625}
+      - time: 43.34932
+        viewport: {x: 0.15153733, y: 0.72005206}
+      - time: 44.117325
+        viewport: {x: 0.16105418, y: 0.44140625}
+      - time: 44.778664
+        viewport: {x: 0.22108346, y: 0.28385416}
+      - time: 45.247982
+        viewport: {x: 0.4385066, y: 0.25260416}
+      - time: 46.22932
+        viewport: {x: 0.6325037, y: 0.57682294}
+      - time: 47.125328
+        viewport: {x: 0.79282576, y: 0.3268229}
+      - time: 48.021317
+        viewport: {x: 0.9143485, y: 0.66536456}
+      - time: 48.490658
+        viewport: {x: 0.65373355, y: 0.76171875}
+      - time: 49.00265
+        viewport: {x: 0.39019033, y: 0.70182294}
+      - time: 49.91998
+        viewport: {x: 0.15373352, y: 0.7578125}
+      - time: 50.87998
+        viewport: {x: 0.16032211, y: 0.40234375}
+      - time: 51.797325
+        viewport: {x: 0.33601758, y: 0.64973956}
+      - time: 52.30932
+        viewport: {x: 0.35944363, y: 0.4466146}
+      - time: 52.757324
+        viewport: {x: 0.5285505, y: 0.72265625}
+      - time: 53.717323
+        viewport: {x: 0.6691069, y: 0.41796875}
+      - time: 54.677322
+        viewport: {x: 0.7650073, y: 0.6822917}
+      - time: 55.59465
+        viewport: {x: 0.84846264, y: 0.3828125}
+      - time: 56.55465
+        viewport: {x: 0.8696925, y: 0.23567708}
+      - time: 57.42932
+        viewport: {x: 0.4465593, y: 0.40234375}
+      - time: 58.38932
+        viewport: {x: 0.058565155, y: 0.7760417}
+      - time: 59.306644
+        viewport: {x: 0.08052709, y: 0.3658854}
+      - time: 59.797325
+        viewport: {x: 0.2284041, y: 0.5885417}
+      - time: 60.287983
+        viewport: {x: 0.29648608, y: 0.4296875}
+      - time: 61.226643
+        viewport: {x: 0.4714495, y: 0.671875}
+      - time: 62.14399
+        viewport: {x: 0.66837484, y: 0.3359375}
+      - time: 63.061314
+        viewport: {x: 0.8023426, y: 0.65755206}
+      - time: 63.57331
+        viewport: {x: 0.89238656, y: 0.37890625}
+      - time: 64.06399
+        viewport: {x: 0.3828697, y: 0.5833333}
+      - time: 64.93866
+        viewport: {x: 0.17349927, y: 0.8046875}
+      - time: 65.87733
+        viewport: {x: 0.10248902, y: 0.46614584}
+      - time: 66.837326
+        viewport: {x: 0.17057101, y: 0.2981771}
+      - time: 67.775986
+        viewport: {x: 0.34919474, y: 0.6692708}
+      - time: 68.735985
+        viewport: {x: 0.4670571, y: 0.37109375}
+      - time: 69.67465
+        viewport: {x: 0.62005854, y: 0.6927083}
+      - time: 70.61331
+        viewport: {x: 0.76061493, y: 0.3294271}
+      - time: 71.50932
+        viewport: {x: 0.8660322, y: 0.55859375}
+      - time: 72.46932
+        viewport: {x: 0.9304539, y: 0.7239583}
+      - time: 73.42932
+        viewport: {x: 0.5512445, y: 0.7369792}
+      - time: 74.34664
+        viewport: {x: 0.12371889, y: 0.7473958}
+      - time: 75.28533
+        viewport: {x: 0.1068814, y: 0.43229166}
+      - time: 76.24533
+        viewport: {x: 0.20937042, y: 0.23958333}
+      - time: 77.16265
+        viewport: {x: 0.5021962, y: 0.5911458}
+      - time: 78.05866
+        viewport: {x: 0.7467057, y: 0.3671875}
+      - time: 79.01866
+        viewport: {x: 0.8206442, y: 0.6666667}
+      - time: 79.97866
+        viewport: {x: 0.5168375, y: 0.5052083}
+      - time: 80.93866
+        viewport: {x: 0.56881404, y: 0.26041666}
+      - time: 82.79465
+        viewport: {x: 0.13030747, y: 0.7057292}
+      - time: 83.75465
+        viewport: {x: 0.1647145, y: 0.36979166}
+      - time: 86.570656
+        viewport: {x: 0.4114202, y: 0.7213542}
+      - time: 87.466644
+        viewport: {x: 0.5043924, y: 0.4388021}
+      - time: 88.42664
+        viewport: {x: 0.61200583, y: 0.6875}
+      - time: 89.301315
+        viewport: {x: 0.76427525, y: 0.4127604}
+      - time: 90.261314
+        viewport: {x: 0.89458275, y: 0.23307292}
+      - time: 91.22131
+        viewport: {x: 0.16910689, y: 0.68098956}
+      - time: 92.20265
+        viewport: {x: 0.12079063, y: 0.37109375}
+      - time: 93.077324
+        viewport: {x: 0.47071743, y: 0.4622396}
+      - time: 94.03732
+        viewport: {x: 0.7247438, y: 0.7630208}
+      - time: 94.99732
+        viewport: {x: 0.8191801, y: 0.4830729}
+      - time: 95.93599
+        viewport: {x: 0.6090776, y: 0.3268229}
+      - time: 96.78932
+        viewport: {x: 0.17715959, y: 0.49609375}
+      - time: 97.77066
+        viewport: {x: 0.090043925, y: 0.79557294}
+      - time: 98.70932
+        viewport: {x: 0.15519765, y: 0.26041666}
+      - time: 99.66932
+        viewport: {x: 0.31991217, y: 0.76953125}
+      - time: 100.60798
+        viewport: {x: 0.4487555, y: 0.3580729}
+      - time: 101.546646
+        viewport: {x: 0.5761347, y: 0.7734375}
+      - time: 102.48533
+        viewport: {x: 0.6837482, y: 0.41796875}
+      - time: 103.40266
+        viewport: {x: 0.8389458, y: 0.265625}
+      - time: 104.34132
+        viewport: {x: 0.2672035, y: 0.47265625}
+      - time: 105.279976
+        viewport: {x: 0.07467057, y: 0.73828125}
+      - time: 106.325325
+        viewport: {x: 0.1068814, y: 0.3033854}
+      - time: 107.157326
+        viewport: {x: 0.2877013, y: 0.6770833}
+      - time: 108.095985
+        viewport: {x: 0.37920937, y: 0.42578125}
+      - time: 109.01331
+        viewport: {x: 0.5695461, y: 0.81380206}
+      - time: 110.05866
+        viewport: {x: 0.81112736, y: 0.32421875}
+      - time: 110.890656
+        viewport: {x: 0.8631039, y: 0.703125}
+      - time: 111.786644
+        viewport: {x: 0.3045388, y: 0.66276044}
+      - time: 112.76798
+        viewport: {x: 0.08418741, y: 0.796875}
+      - time: 113.70664
+        viewport: {x: 0.14348462, y: 0.3346354}
+      - time: 114.64533
+        viewport: {x: 0.35065886, y: 0.7161458}
+      - time: 115.56265
+        viewport: {x: 0.4956076, y: 0.39322916}
+      - time: 116.56533
+        viewport: {x: 0.681552, y: 0.7552083}
+      - time: 117.43998
+        viewport: {x: 0.8045388, y: 0.3671875}
+      - time: 118.37866
+        viewport: {x: 0.1830161, y: 0.484375}
+      - time: 119.29599
+        viewport: {x: 0.21083455, y: 0.7395833}
+      - time: 120.25599
+        viewport: {x: 0.3967789, y: 0.27604166}
+      - time: 121.23733
+        viewport: {x: 0.5475842, y: 0.74869794}
+      - time: 122.19733
+        viewport: {x: 0.66617864, y: 0.3268229}
+      - time: 123.157326
+        viewport: {x: 0.84040993, y: 0.72265625}
+      - time: 124.074646
+        viewport: {x: 0.93557835, y: 0.34375}
+      - time: 124.97066
+        viewport: {x: 0.94802344, y: 0.22005208}
+      - time: 125.90932
+        viewport: {x: 0.38213763, y: 0.47265625}
+      - time: 126.826645
+        viewport: {x: 0.12371889, y: 0.6979167}
+      - time: 127.786644
+        viewport: {x: 0.1295754, y: 0.32291666}
+      - time: 128.704
+        viewport: {x: 0.34333822, y: 0.6666667}
+      - time: 129.59998
+        viewport: {x: 0.4919473, y: 0.4388021}
+      - time: 130.51732
+        viewport: {x: 0.5475842, y: 0.69661456}
+      - time: 131.54132
+        viewport: {x: 0.71961933, y: 0.3515625}
+      - time: 132.50131
+        viewport: {x: 0.77086383, y: 0.68359375}
+      - time: 133.41866
+        viewport: {x: 0.88433385, y: 0.41015625}
+      - time: 135.232
+        viewport: {x: 0.12518302, y: 0.7708333}
+      - time: 136.21332
+        viewport: {x: 0.19619326, y: 0.38020834}
+      - time: 137.152
+        viewport: {x: 0.33674964, y: 0.72005206}
+      - time: 138.02664
+        viewport: {x: 0.4714495, y: 0.38671875}
+      - time: 138.53867
+        viewport: {x: 0.57101023, y: 0.7005208}
+      - time: 139.00798
+        viewport: {x: 0.6778917, y: 0.4075521}
+      - time: 139.94664
+        viewport: {x: 0.8023426, y: 0.73307294}
+      - time: 140.90665
+        viewport: {x: 0.93338215, y: 0.3606771}
+      - time: 142.784
+        viewport: {x: 0.05783309, y: 0.7447917}
+      - time: 143.72266
+        viewport: {x: 0.15592971, y: 0.40625}
+      - time: 144.63998
+        viewport: {x: 0.32503662, y: 0.67838544}
+      - time: 145.59998
+        viewport: {x: 0.4509517, y: 0.3763021}
+      - time: 146.51732
+        viewport: {x: 0.5959004, y: 0.7421875}
+      - time: 147.456
+        viewport: {x: 0.7284041, y: 0.39453125}
+      - time: 148.45866
+        viewport: {x: 0.8631039, y: 0.6848958}
+      - time: 149.39732
+        viewport: {x: 0.36383602, y: 0.68880206}
+      - time: 150.25066
+        viewport: {x: 0.08784773, y: 0.80078125}
+      - time: 151.21066
+        viewport: {x: 0.18008785, y: 0.3841146}
+      - time: 152.10664
+        viewport: {x: 0.35651538, y: 0.69661456}
+      - time: 153.06665
+        viewport: {x: 0.41654465, y: 0.42708334}
+      - time: 153.53598
+        viewport: {x: 0.5549048, y: 0.67317706}
+      - time: 154.02664
+        viewport: {x: 0.62884337, y: 0.48177084}
+      - time: 154.92265
+        viewport: {x: 0.69692534, y: 0.67838544}
+      - time: 155.92532
+        viewport: {x: 0.8228404, y: 0.4049479}
+      - time: 156.77866
+        viewport: {x: 0.5424597, y: 0.56119794}
+      - time: 157.26932
+        viewport: {x: 0.42093703, y: 0.45052084}
+      - time: 157.73866
+        viewport: {x: 0.26061493, y: 0.6484375}
+      - time: 158.71997
+        viewport: {x: 0.19033675, y: 0.44140625}
+      - time: 159.65866
+        viewport: {x: 0.37408492, y: 0.67317706}
+      - time: 160.10664
+        viewport: {x: 0.43631038, y: 0.4765625}
+      - time: 160.59732
+        viewport: {x: 0.53001463, y: 0.6822917}
+      - time: 161.51465
+        viewport: {x: 0.6727672, y: 0.41927084}
+      - time: 162.47466
+        viewport: {x: 0.76866764, y: 0.64453125}
+      - time: 163.456
+        viewport: {x: 0.8755491, y: 0.38802084}
+      - time: 164.3733
+        viewport: {x: 0.45387995, y: 0.59765625}
+      - time: 165.24799
+        viewport: {x: 0.2532943, y: 0.4309896}
+      - time: 166.20798
+        viewport: {x: 0.08711567, y: 0.72526044}
+      - time: 167.14664
+        viewport: {x: 0.15080526, y: 0.328125}
+      - time: 167.61598
+        viewport: {x: 0.2898975, y: 0.640625}
+      - time: 168.10664
+        viewport: {x: 0.36456808, y: 0.4153646}
+      - time: 168.55464
+        viewport: {x: 0.5021962, y: 0.68098956}
+      - time: 169.00266
+        viewport: {x: 0.63909227, y: 0.41145834}

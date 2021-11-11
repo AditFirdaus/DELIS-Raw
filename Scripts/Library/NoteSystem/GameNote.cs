@@ -29,6 +29,11 @@ public class GameNote : MonoBehaviour
         onStart.Invoke(note);
     }
 
+    public void Beat()
+    {
+        if (Game.player.autohit) Hit();
+    }
+
     public void Hit()
     {
         animator.Play("Hit");

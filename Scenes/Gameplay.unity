@@ -5745,7 +5745,7 @@ MonoBehaviour:
     analyzing: 0
     mono: {fileID: 0}
     audioSource: {fileID: 0}
-    offset: 0
+    offset: -0.1
     noteIndex: 0
     spawnCallback:
       m_PersistentCalls:

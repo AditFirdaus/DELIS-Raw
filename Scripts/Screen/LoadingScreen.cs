@@ -10,6 +10,8 @@ public class LoadingScreen : MonoBehaviour
     public static GameObject ScreenPrefab;
     [NonSerialized] public GameObject screen;
 
+    public CanvasGroup delis;
+
 
     [Header("Loading Screen")]
 
@@ -56,7 +58,6 @@ public class LoadingScreen : MonoBehaviour
     public void Loading(Action action)
     {
         StartCoroutine(LoadingProcess(action, processDuration, introDuration, outroDuration));
-
     }
 
     public IEnumerator LoadingProcess(Action action, float processDuration = 0, float introDuration = 0, float outroDuration = 0)
@@ -90,6 +91,8 @@ public class LoadingScreen : MonoBehaviour
 
     public void Outro()
     {
+        delis.transform.LeanScale(Vector3.one * 0.5f, outroDuration / 3).setEaseInExpo();
+        delis.LeanAlpha(0, outroDuration / 3);
         screenCanvas.LeanAlpha(0, outroDuration / 2).setEaseInSine();
     }
 

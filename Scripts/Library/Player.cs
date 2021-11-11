@@ -23,7 +23,4 @@ public class Player
     {
         if (!SLS.LoadJson<Player>(player, Application.persistentDataPath, "/User", "Player")) player.Save();
     }
-
-
-
 }
